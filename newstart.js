@@ -46,6 +46,7 @@
             migrated: false
         },
         villages: {},
+        times : null,
         reportedVillages: {},
         request: function (d, f, g, h) {
             var i = null,
