@@ -546,7 +546,7 @@
                 TWBot.helpers.writeOut('Attacking: [' + coordData + ']', TWBot.helpers.MESSAGETYPE_NOTE);
                 return
             } else { // added for auto resending, by makemine
-            	TWBot.helpers.writeOut('Resending in ['+TWBot.attacks.times + 'seconds', TWBot.helpers.MESSAGETYPE_NOTE);
+            	TWBot.helpers.writeOut('Resending in ['+TWBot.attacks.times + '] seconds', TWBot.helpers.MESSAGETYPE_NOTE);
                 window.setTimeout(TWBot.attacks.polling, TWBot.attacks.times*100);
                 return
             }
