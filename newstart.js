@@ -446,7 +446,7 @@
             for (unitType in TWBot.data.unitTypes) {
                 this.unitPerAttack[unitType] = attack.unitsPerAttack[unitType]
             }
-            this.villages = attack.coords;.
+            this.villages = attack.coords;
             this.villagearr = this.villages.split(" ");
             this.targets = this.villagearr.length;
             this.times = attack.times;
