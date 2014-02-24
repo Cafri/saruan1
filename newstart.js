@@ -504,10 +504,8 @@
             }
             if (this.botting.is(':checked')) {
                 TWBot.helpers.writeOut('Not enough units of type: ' + TWBot.data.unitTypes[unitType] + ' waiting till some return...', TWBot.helpers.MESSAGETYPE_NOTE)
-                alert("here");
             } else {
                 TWBot.helpers.writeOut('Not enough units of type: ' + TWBot.data.unitTypes[unitType], TWBot.helpers.MESSAGETYPE_ERROR);
-                alert("here2");
                 if (b == null) {
                     this.stopAttack()
                 }
@@ -548,8 +546,6 @@
                 TWBot.helpers.writeOut('Attacking: [' + coordData + ']', TWBot.helpers.MESSAGETYPE_NOTE);
                 return
             } else { // added for auto resending, by makemine
-            	alert(TWBot.attacks.times);
-            	TWBot.attacks.
             	TWBot.helpers.writeOut('Resending in ['+TWBot.attacks.times + 'seconds', TWBot.helpers.MESSAGETYPE_NOTE);
                 window.setTimeout(TWBot.attacks.polling, TWBot.attacks.times*100);
                 return
