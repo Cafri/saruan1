@@ -423,7 +423,8 @@
                 name: $('#template_name').val().trim(),
                 unitsPerAttack: templateUnits,
                 coords: $('#template_coords').val().trim(),
-                position: $('#template_position').val()
+                position: $('#template_position').val(),
+                times: $('#template_time').val()
             };
             this.attackTemplates[id] = attack;
             TWBot.data.store('attacks_attacktemplates', this.attackTemplates, true)
@@ -543,8 +544,8 @@
                 TWBot.helpers.writeOut('Attacking: [' + coordData + ']', TWBot.helpers.MESSAGETYPE_NOTE);
                 return
             } else { // added for auto resending, by makemine
-                TWBot.helpers.writeOut('Resending in 100 seconds', TWBot.helpers.MESSAGETYPE_NOTE);
-                window.setTimeout(TWBot.attacks.polling, 100000);
+                TWBot.helpers.writeOut('Resending in ['+attack.times + 'seconds', TWBot.helpers.MESSAGETYPE_NOTE);
+                window.setTimeout(TWBot.attacks.polling, attack.times*100);
                 return
             }
             if (TWBot.helpers.timerOff && TWBot.attacks.botting.is(':checked')) {
