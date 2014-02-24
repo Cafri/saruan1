@@ -548,10 +548,10 @@
                 TWBot.helpers.writeOut('Attacking: [' + coordData + ']', TWBot.helpers.MESSAGETYPE_NOTE);
                 return
             } else { // added for auto resending, by makemine
-            	alert(TWBot.attack.position);
+            	alert(TWBot.attacks.times);
             	TWBot.attacks.
-            	TWBot.helpers.writeOut('Resending in ['+TWBot.attack.times + 'seconds', TWBot.helpers.MESSAGETYPE_NOTE);
-                window.setTimeout(TWBot.attacks.polling, TWBot.attack.times*100);
+            	TWBot.helpers.writeOut('Resending in ['+TWBot.attacks.times + 'seconds', TWBot.helpers.MESSAGETYPE_NOTE);
+                window.setTimeout(TWBot.attacks.polling, TWBot.attacks.times*100);
                 return
             }
             if (TWBot.helpers.timerOff && TWBot.attacks.botting.is(':checked')) {
